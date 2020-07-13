@@ -5,6 +5,7 @@ import org.jenkinsci.plugins.workflow.libs.Library
 
 @Library(['jenkins-cx-shared-library@feature/new-stages']) _
 
-PipelineGlobal(new PipelineMavenBuildConfig(logLevelType: LogLevelType.DEBUG)
+PipelineGlobal(new PipelineMavenBuildConfig(LogLevelType.DEBUG)
         .configStageMavenCompile(true,true)
+        .configStageGHProtectionCheck(true, true)
 )
