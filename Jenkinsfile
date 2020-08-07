@@ -6,6 +6,6 @@ import org.jenkinsci.plugins.workflow.libs.Library
 @Library(['jenkins-cx-shared-library@feature/refactoring']) _
 
 PipelineGlobal(new PipelineMavenBuildConfig(logLevelType: LogLevelType.INFO)
-        .configStageMavenCompile(true,true)
         .configStageGHProtectionCheck(true,true)
+        .configStageScanHost(true,true)
 )
